@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mario Avoids P2</string>
+    <string name="leaderboard">Leaderboard</string>
 </resources>

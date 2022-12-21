@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-        }, 0, 140);
+        }, 0, 230);
     }
 
 
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         } else {
-            Thread.sleep(12);
+            Thread.sleep(6);
         }
         enemies_locations[random_number] = 1;
     }
@@ -179,9 +179,9 @@ public class MainActivity extends AppCompatActivity {
         for (Enemy en : enemies) {
             en.getLoc().setVisibility(View.VISIBLE);
             en.getLoc().setY(en.getLoc().getY() + 23);
-            Thread.sleep(8);
+            Thread.sleep(4);
             en.getLoc().setY(en.getLoc().getY() + 23);
-            Thread.sleep(8);
+            Thread.sleep(4);
             en.getLoc().setY(en.getLoc().getY() + 23);
             if (en.getLoc().getY() >= 1445) {
                 checkCollision(en);
