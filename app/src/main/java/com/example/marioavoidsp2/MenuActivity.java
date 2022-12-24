@@ -36,6 +36,7 @@ public class MenuActivity extends AppCompatActivity {
     double latitude;
     String name;
     SwitchMaterial speed_switch;
+    SwitchMaterial sensor_switch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +90,7 @@ public class MenuActivity extends AppCompatActivity {
         mainIntent.putExtra(MainActivity.LATITUDE, latitude);
         mainIntent.putExtra(MainActivity.NAME, name);
         mainIntent.putExtra("Switch", speed_switch.isChecked());
+        mainIntent.putExtra("Sensor", sensor_switch.isChecked());
         mainIntent.addFlags(mainIntent.FLAG_ACTIVITY_NO_ANIMATION);
 
         startActivity(mainIntent);
@@ -111,6 +113,7 @@ public class MenuActivity extends AppCompatActivity {
         menu_BTN_ldrboard = findViewById(R.id.menu_BTN_ldrboard);
         name_enter = findViewById(R.id.name_enter);
         speed_switch = findViewById(R.id.speed_switch);
+        sensor_switch = findViewById(R.id.sensor_switch);
 
         // --------------- --------------- ---------------
     }

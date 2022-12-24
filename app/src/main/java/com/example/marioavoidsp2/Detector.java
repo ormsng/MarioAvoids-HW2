@@ -44,14 +44,12 @@ public class Detector {
         if (System.currentTimeMillis() - timestamp > 500) {
             timestamp = System.currentTimeMillis();
             if (x > 2.0) {
-                stepCountX++;
-                if (stepCallback != null)
-                    stepCallback.sensorMove(true);
-            }
-            if (x < 2.0) {
-                stepCountX++;
                 if (stepCallback != null)
                     stepCallback.sensorMove(false);
+            }
+            if (x < 2.0) {
+                if (stepCallback != null)
+                    stepCallback.sensorMove(true);
             }
         }
     }

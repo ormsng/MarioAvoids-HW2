@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     int score = 0;
     boolean stopped = false;
     boolean isSpeedChecked = false;
+    boolean isSensorChecked = false;
 
     public static final String LONGITUDE = "LONGITUDE";
     public static final String LATITUDE = "LATITUDE";
@@ -81,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
         longitude = prevIntent.getExtras().getDouble(LONGITUDE);
         name = prevIntent.getExtras().getString(NAME);
         isSpeedChecked = prevIntent.getBooleanExtra("Switch", false);
+        isSensorChecked = prevIntent.getBooleanExtra("Sensor", false);
+        if(isSensorChecked == true){
+            initStepDetector();
+            game_BTN_right.setVisibility(View.INVISIBLE);
+            game_BTN_left.setVisibility(View.INVISIBLE);
+        }
     }
 
 
