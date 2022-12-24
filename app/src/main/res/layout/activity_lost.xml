@@ -9,10 +9,11 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="You Lost"
+        android:text="Leaderboard"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        android:gravity="center_horizontal" />
 
 
     <LinearLayout
@@ -28,14 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
-            android:text="PLAY AGAIN" />
-
-        <Button
-            android:id="@+id/menu_BTN_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
-            android:text="MENU" />
+            android:text="MAIN MENU" />
 
     </LinearLayout>
 
@@ -47,14 +41,14 @@
         android:orientation="vertical">
 
         <FrameLayout
-            android:id="@+id/lost_FRM_score"
+            android:id="@+id/lost_board"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:padding="32dp" />
 
         <FrameLayout
-            android:id="@+id/lost_FRM_maps"
+            android:id="@+id/lost_map"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
